@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DREAD Calculator</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2 class="mb-4">DREAD Calculator</h2>
+    <form id="dreadForm">
+        <div class="form-group">
+            <label for="damage">Damage Potential</label>
+            <input type="number" class="form-control" id="damage" min="1" max="10" required>
+            <small class="form-text text-muted">Assesses the potential impact on the organization if the vulnerability is exploited. Rate from 1 (least damage) to 10 (most severe damage).</small>
+        </div>
+        <div class="form-group">
+            <label for="reproducibility">Reproducibility</label>
+            <input type="number" class="form-control" id="reproducibility" min="1" max="10" required>
+            <small class="form-text text-muted">Measures how consistently the threat can be reproduced. Rate from 1 (very hard to reproduce) to 10 (can be reproduced every time).</small>
+        </div>
+        <div class="form-group">
+            <label for="exploitability">Exploitability</label>
+            <input type="number" class="form-control" id="exploitability" min="1" max="10" required>
+            <small class="form-text text-muted">Evaluates how easy it is to exploit the vulnerability. Rate from 1 (very difficult to exploit) to 10 (requires no special conditions to exploit).</small>
+        </div>
+        <div class="form-group">
+            <label for="affectedUsers">Affected Users</label>
+            <input type="number" class="form-control" id="affectedUsers" min="1" max="10" required>
+            <small class="form-text text-muted">Indicates the proportion of users that could be affected by the vulnerability. Rate from 1 (few users affected) to 10 (all users affected).</small>
+        </div>
+        <div class="form-group">
+            <label for="discoverability">Discoverability</label>
+            <input type="number" class="form-control" id="discoverability" min="1" max="10" required>
+            <small class="form-text text-muted">Assesses how obvious the vulnerability is to an attacker. Rate from 1 (very hard to discover) to 10 (obvious to anyone).</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Calculate</button>
+    </form>
+    <div id="result" class="mt-4"></div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
